@@ -1,0 +1,6 @@
+<resources>>
+
+    <style name="Theme.FlickrApplication" parent="Theme.Base">
+        <item name="android:navigationBarColor">@color/primaryIndigo</item>
+    </style>
+</resources>

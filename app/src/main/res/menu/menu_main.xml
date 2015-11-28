@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:flickrApp="http://schemas.android.com/apk/res-auto"
+    tools:context="com.squirrel.flickrbrowser.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        flickrApp:showAsAction="never" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/action_search_text"
+        android:orderInCategory="1"
+        flickrApp:showAsAction="always"
+        />
+</menu>
