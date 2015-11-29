@@ -84,11 +84,13 @@ public class GetJsonData extends GetRawData{
                 String title = imageObj.getString(TITLE);
                 String author = imageObj.getString(AUTHOR);
                 String author_id = imageObj.getString(AUTHOR_ID);
-                String link = imageObj.getString(LINK);
+              //  String link = imageObj.getString(LINK);
                 String tags = imageObj.getString(TAGS);
                 String date = imageObj.getString(DATE);
                 JSONObject mediaObj = imageObj.getJSONObject(MEDIA_OBJ);
                 String image_url = mediaObj.getString(IMAGE_URL);
+                //to get bigger images nee dto replace _m.jpg with _b.jpg
+                String link = image_url.replaceFirst("_m.","_b.");
 
                 //String mTitle, String mAuthor, String mAuthorId, String mImage, String mLink, String mTags, String mDate
                 Image image = new Image(title, author, author_id, image_url, link, tags, date);

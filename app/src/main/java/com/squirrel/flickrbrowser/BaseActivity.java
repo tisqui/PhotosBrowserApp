@@ -10,6 +10,7 @@ public class BaseActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
     public final String SEARCH_QUERY = "QUERY";
+    public final String IMAGE_TRANSFER = "IMAGE_TRANSFER";
 
     protected Toolbar getToolbar(){
         if(mToolbar == null){

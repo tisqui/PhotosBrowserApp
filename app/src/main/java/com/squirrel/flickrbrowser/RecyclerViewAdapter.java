@@ -36,7 +36,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
         Image imageItem = mImagesList.get(position);
         Log.d(LOG_TAG, "Processing the item: " + imageItem.getmTitle() + " " + position);
-        Picasso.with(mContext).load(imageItem.getmImage())
+        Picasso.with(mContext).load(imageItem.getmLink())
                 .error(R.drawable.placeholder)
                 .placeholder(R.drawable.placeholder)
                 .into(holder.thumbnailImage);
@@ -47,5 +47,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ImageViewHolder> {
     @Override
     public int getItemCount() {
         return (null != mImagesList ? mImagesList.size() : 0);
+    }
+
+    public void setNewData (List<Image> newImages){
+        mImagesList = newImages;
+        notifyDataSetChanged();
+    }
+
+    public Image getImage(int position){
+        return (null != mImagesList ? mImagesList.get(position) : null);
     }
 }

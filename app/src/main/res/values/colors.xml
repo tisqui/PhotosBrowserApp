@@ -7,5 +7,6 @@
     <color name="primaryTextColor">@color/md_white_1000</color>
     <color name="highlightTextColor">@color/md_indigo_900</color>
     <color name="secondaryTextColor">@color/md_black_1000</color>
+    <color name="browsePrimaryTextColor">@color/md_grey_800</color>
 
 </resources>

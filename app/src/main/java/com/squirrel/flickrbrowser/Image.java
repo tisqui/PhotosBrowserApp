@@ -1,9 +1,13 @@
 package com.squirrel.flickrbrowser;
 
+import java.io.Serializable;
+
 /**
  * Created by squirrel on 11/26/15.
  */
-public class Image {
+public class Image implements Serializable{
+
+    private final Long serialVersion = 1L;
     private String mTitle;
     private String mAuthor;
     private String mAuthorId;
@@ -20,6 +24,10 @@ public class Image {
         this.mTags = mTags;
         this.mDate = mDate;
         this.mAuthorId = mAuthorId;
+    }
+
+    public Long getSerialVersion() {
+        return serialVersion;
     }
 
     public String getmTitle() {
