@@ -21,7 +21,7 @@
 
     <style name="ActionBarThemeOverlay" parent="">
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
-        <item name="android:textColorHighlight">@color/highlightTextColor</item>
+        <item name="android:textColorHighlight">@color/md_white_1000</item>
         <item name="android:actionMenuTextColor">@color/primaryTextColor</item>
         <item name="android:textColorSecondary">@color/primaryTextColor</item>
         <item name="android:background">@color/primaryIndigo</item>
@@ -35,7 +35,10 @@
 
     <style name="Theme.FlickrApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.FlickrApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.FlickrApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:background">@color/md_indigo_100</item>
+    </style>
 
     <!--<style name="AppTheme.NoActionBar">-->
     <!--<item name="windowActionBar">false</item>-->

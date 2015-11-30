@@ -24,9 +24,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ImageViewHolder> {
         this.mImagesList = mImagesList;
     }
 
+//    @Override
+//    public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse, null);
+//        ImageViewHolder imageViewHolder = new ImageViewHolder(view);
+//        return imageViewHolder;
+//    }
+
     @Override
     public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse, parent, false);
         ImageViewHolder imageViewHolder = new ImageViewHolder(view);
         return imageViewHolder;
     }
@@ -40,7 +47,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ImageViewHolder> {
                 .error(R.drawable.placeholder)
                 .placeholder(R.drawable.placeholder)
                 .into(holder.thumbnailImage);
-        holder.titleOfImage.setText(imageItem.getmTitle());
+        String imageTitle = imageItem.getmTitle();
+        if(imageTitle.length()==0){
+            holder.titleOfImage.setText("...");
+        } else{
+            holder.titleOfImage.setText(imageItem.getmTitle());
+        }
 
     }
 

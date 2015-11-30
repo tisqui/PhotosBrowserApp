@@ -4,7 +4,7 @@
     <string name="action_search_text">Search</string>
     <string name="title_activity_search">Search</string>
     <string name="search_menu">Search</string>
-    <string name="search_quesry_text">Search Query</string>
+    <string name="search_quesry_text">Enter tags</string>
     <string name="search_hint">Enter the search tags</string>
     <string name="title_activity_view_image">Image Info</string>
 </resources>
